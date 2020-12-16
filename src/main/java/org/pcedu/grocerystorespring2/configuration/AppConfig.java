@@ -10,13 +10,13 @@ import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.JstlView;
 
-@Configuration
+@Configuration                   //dinei odhgies sto jvm, gia to pws trexei to project, h class me @configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "org.pcedu.grocerystorespring2")
+@ComponentScan(basePackages = "org.pcedu.grocerystorespring2")      //entolh na kanei scan sto path auto mhpws vrei kai alla configuration files
 public class AppConfig {
 	
 	@Bean
-	public ViewResolver viewResolver() {
+	public ViewResolver viewResolver() {                // se stelnei sta jsp arxeia 
 		InternalResourceViewResolver viewResolver = new InternalResourceViewResolver();
 		viewResolver.setViewClass(JstlView.class);
 		viewResolver.setPrefix("/WEB-INF/views/");
